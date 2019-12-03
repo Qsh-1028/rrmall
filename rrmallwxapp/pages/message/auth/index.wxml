@@ -1,0 +1,12 @@
+<view class="page">
+    <view class="inner">
+        <view class="image">
+            <image src="{{imgUrl+'/plugin/app/static/images/wxapp/accredit.png'}}"></image>
+        </view>
+        <view class="text" wx:if="{{!close}}"><text>小程序需要获取您的授权
+才能为您提供后续服务哦</text></view>
+        <button bindtap="usercheck" class="btn" style="background:#c0c0c0">下次再说</button>
+        <button bindgetuserinfo="bindGetUserInfo" class="btn" openType="getUserInfo" wx:if="{{!close}}">点击授权</button>
+        <view class="text" wx:if="{{close}}">{{text}}</view>
+    </view>
+</view>
